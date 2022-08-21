@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styl.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+  
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{url_for('home_page')}}">Eshfeeny</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('login_page')}}">Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('signUp_page')}}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('aboutUs_page')}}">About US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('contactUs_page')}}">Contact US</a>
+                </li>
+               
+              </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row" >
+      {% block content %} {% endblock %}
+      </div>
+
+     
+
+      
+  <div class=" mt-4" style="background-color: silver; width: 1670px;">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-6 col-lg-2 offset-lg-1 mr-6">
+        <h5>Eshfeeny</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{url_for('aboutUs_page')}}">About Us</a></li>
+          <li class="mb-2"><a href="{{url_for('ourteam_page')}}"> Our Team</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mr-6" style="padding-top: 15px;">
+        <h5>Search By</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{url_for('speciality_page')}}">Speciality</a></li>
+          <li class="mb-2"><a href="{{url_for('doctor_page')}}">Doctors</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mr-6 ">
+        <h5>Need Help?</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{url_for('contactUs_page')}}">Contact Us</a></li>
+          <li class="mb-2"><a href="{{url_for('policy_page')}}">Policy</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+</body>
+</html>

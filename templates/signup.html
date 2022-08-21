@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}SignUp{% endblock %}
+
+{% block content %}
+
+<div class="row container-fluid">
+  <div class="col-lg-6 card" style="box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%), 0 3px 10px 0 rgb(0 0 0 / 20%) !important;">
+    <div class="container-fluid">
+          <div class="container-fluid">
+            <form method="POST">
+                <div>
+                  <label for="exampleInputEmail1" class="form-label">First Name</label>
+                  <input name="firstname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div >
+                  <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                  <input name="lastname" type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div >
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                  <div >
+                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div >
+                    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+                    <input name="phonenumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div >
+                    <label for="exampleInputEmail1" class="form-label">Age</label>
+                    <input name="age" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div >
+                        <input type="radio" id="m" name="gender" value="Male">
+                        <label for="Male">Male</label><br>
+                        <input type="radio" id="f" name="gender" value="Female">
+                        <label for="Female">Female</label><br>       
+                  </div>
+                  <button  type="submit"  class="btn btn-primary">Submit</button>
+            </form>
+    
+    
+           </div>
+         </div>
+    </div>
+  <div class="col-lg-6">
+    <img src="../static/images/hospital2.jpg" alt="this is an image" style="width: 700px; height: 500px">
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}
